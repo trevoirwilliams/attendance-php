@@ -1,8 +1,16 @@
 <?php 
-    $host = '127.0.0.1';
-    $db = 'attendance_db';
-    $user = 'root';
-    $pass = '';
+    // Development Connection
+    // $host = '127.0.0.1';
+    // $db = 'attendance_db';
+    // $user = 'root';
+    // $pass = '';
+    // $charset = 'utf8mb4';
+
+    //Remote Database Connection
+    $host = 'remotemysql.com';
+    $db = 'NC1HPsPMvA';
+    $user = 'NC1HPsPMvA';
+    $pass = 'rqUDdNcsXH';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -11,7 +19,7 @@
         $pdo = new PDO($dsn, $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    } catch(PDOException $e) {z
+    } catch(PDOException $e) {
         throw new PDOException($e->getMessage());
     }
 
