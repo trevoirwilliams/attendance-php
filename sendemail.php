@@ -61,4 +61,5 @@
 
     $mail = new SendEmail('trevoir.williams@gmail.com','test','tst email');
     print_r($mail->response());
+    echo 'email sent'; 
 ?>
