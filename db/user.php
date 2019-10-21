@@ -76,5 +76,31 @@
                 return false;
             }
         }
+
+        public function deleteUser($id){
+            try{
+                $sql = "delete from users where id = :id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                return true;
+            }catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
+
+        public function resetPassword($id){
+            try{
+                $sql = "update users set password = 'pass' where id = :id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                return true;
+            }catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
     }
 ?>

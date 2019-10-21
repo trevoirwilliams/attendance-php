@@ -1,9 +1,9 @@
 <?php 
     // Development Connection
     $host = '127.0.0.1';
-    $db = 'attendance_db';
+    $db = 'attendee_db';
     $user = 'root';
-    $pass = '';
+    $pass = 'password';
     $charset = 'utf8mb4';
 
     //Remote Database Connection
