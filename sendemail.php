@@ -58,5 +58,5 @@
 // }
 
     $mail = new SendEmail('trevoir.williams@gmail.com','test','tst email');
-    print_r($mail)
+    print_r($mail->response());
 ?>
