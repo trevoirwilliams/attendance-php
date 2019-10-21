@@ -1,6 +1,6 @@
 <?php
 $variables = [
-      'SENDGRID_API_KEY'=>'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',
+      'SENDGRID_API_KEY'=>'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',
       'DB_HOST' => 'localhost',
       'DB_USERNAME' => 'root',
       'DB_PASSWORD' => '',
