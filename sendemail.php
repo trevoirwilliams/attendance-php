@@ -30,6 +30,9 @@
             }
         }
     }
+    $mail = new SendEmail('trevoir.williams@gmail.com','test','tst email');
+    print_r($mail->response());
+    echo 'email sent'; 
 ?>
 <?php
 // require 'vendor/autoload.php'; // If you're using Composer (recommended)
@@ -59,7 +62,5 @@
 //     echo 'Caught exception: '. $e->getMessage() ."\n";
 // }
 
-    $mail = new SendEmail('trevoir.williams@gmail.com','test','tst email');
-    print_r($mail->response());
-    echo 'email sent'; 
+
 ?>
