@@ -9,7 +9,7 @@
             $email->setFrom("trevoir.williams@gmail.com", "Example User");
             $email->setSubject($subject);
             $email->addTo($to);
-            $email->addContent($content);
+            $email->addContent("text/plain", $content);
             print_r($email) . '<br/><br/><br/>';
             $sendgrid = new \SendGrid($_APIKEY);
             print_r($sendgrid) . '<br/><br/><br/>';
