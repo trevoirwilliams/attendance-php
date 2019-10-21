@@ -1,8 +1,6 @@
-<h1>TEST</h1>
-
 <?php 
     require 'vendor/autoload.php';
-    require 'autoload.php';
+ 
     class SendEmail{
         private $email;
         private $_APIKEY = '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';
@@ -10,6 +8,7 @@
 
         function __construct()
         {
+            echo 'SendEmail Initialized';
             $this->email = new \SendGrid\Mail\Mail(); 
         }
 
