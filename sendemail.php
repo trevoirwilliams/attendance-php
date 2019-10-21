@@ -3,7 +3,7 @@
  
     class SendEmail{
 
-        public static function SendEmail($to, $subject,$content){
+        public static function SendMail($to, $subject,$content){
             $_APIKEY = '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';
             $email = new \SendGrid\Mail\Mail();
             $email->setFrom("trevoir.williams@gmail.com", "Example User");
