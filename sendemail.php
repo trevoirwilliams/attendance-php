@@ -10,11 +10,12 @@
             $email->setSubject($subject);
             $email->addTo($to);
             $email->addContent($content);
-
+            print_r($email) . '<br/><br/><br/>';
             $sendgrid = new \SendGrid($_APIKEY);
+            print_r($sendgrid) . '<br/><br/><br/>';
             try {
                 $response = $sendgrid->send($email);
-                return $response->response;
+                return $response;
             } catch (Exception $e) {
                 echo 'Caught exception: '. $e->getMessage() ."\n";
                 return false;
