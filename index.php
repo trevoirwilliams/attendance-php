@@ -2,7 +2,8 @@
 <?php
     $title = 'Index'; 
     require_once 'sendemail.php'; 
-    SendEmail::SendMail('trevoir.williams@gmail.com', 'Test', 'Test Email');
+    $res = SendEmail::SendMail('trevoir.williams@gmail.com', 'Test', 'Test Email');
+    print_r($res);
     require_once 'includes/header.php'; 
     require_once 'db/conn.php'; 
 
